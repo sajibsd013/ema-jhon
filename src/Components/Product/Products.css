@@ -9,6 +9,7 @@
 .product-name{
     color: blue;
     font-weight: 400;
+    text-transform: capitalize;
 }
 
 .cart-add-button{
@@ -18,4 +19,15 @@
     border-radius: 5px;
     border: 1px solid darkslategray;
     cursor: pointer;
+}
+
+
+@media (max-width: 768px){
+    .product{
+        display: flex;
+        flex-direction: column;
+    }
+    .img{
+        margin: 0 auto;
+    }
 }
