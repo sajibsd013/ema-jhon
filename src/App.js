@@ -8,15 +8,15 @@ import ProductDetail from './Components/ProductDetail/ProductDetail';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import About from './Components/Shop/About';
 import Contact from './Components/Shop/Contact';
-
-function App(props) {
+import {Provider} from 'react-redux';
+import myStore from './Redux/store';
+function App() {
   return (
-    <div >
+    <Provider store={myStore} >
       <Router>
       <Header ></Header>
         <Switch>
@@ -46,7 +46,7 @@ function App(props) {
           </Route>
         </Switch>
       </Router>
-    </div>
+    </Provider>
   );
 }
 
